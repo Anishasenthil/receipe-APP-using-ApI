@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Grid</title>
+    <link rel="stylesheet"  href="main.css"> 
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+   
+        <div class ="heading"><span1>Find  <span>Awesome  Recepies</span>  Across  Globe..</span1></div>
+    <div class="categories">
+        <h1><span>Canadian :</span></h1>
+        <div class="card" onclick="fillInput('BeaverTails')">BeaverTails</div>
+        <div class="card" onclick="fillInput('Breakfast Potatoes')">Breakfast Potatoes</div>
+        <div class="card" onclick="fillInput('Canadian Butter Tarts')">Canadian Butter Tarts</div>
+        <div class="card" onclick="fillInput('Montreal Smoked Meat')">Montreal Smoked Meat</div>
+        <div class="card" onclick="fillInput('Nanaimo Bars')">Nanaimo Bars</div>
+        
+        <!-- Add more Canadian dishes -->
+    </div>
+    <div class="categories">
+        <h1><span>Koreann:</span></h1>
+        <div class="card" onclick="fillInput('Pouding chomeur')">Pouding chomeur</div>
+        <div class="card" onclick="fillInput('Split Pea Soup')">Split Pea Soup</div>
+        <div class="card" onclick="fillInput('Timbits')">Timbits</div>
+        <div class="card" onclick="fillInput('Tourtiere')">Tourtiere</div>
+        <div class="card" onclick="fillInput('Rappie Pie')">Rappie Pie</div>
+        <!-- Add more Indian dishes -->
+    </div>
+    <div class="categories">
+        <h1><span>North Indian:</span></h1>
+        <div class="card" onclick="fillInput('Baingan Bharta')">Baingan Bharta</div>
+        <div class="card" onclick="fillInput('Chicken Handi')">Chicken Handi</div>
+        <div class="card" onclick="fillInput('Dal fry')">Dal fry</div>
+        <div class="card" onclick="fillInput('Matar Paneer')">Matar Paneer</div>
+        <div class="card" onclick="fillInput('Recheado Masala Fish')">Recheado Masala Fish</div>
+        <!-- Add more Indian dishes -->
+    </div>
+    <div class="categories">
+        <h1><span>South Indian:</span></h1>
+        <div class="card" onclick="fillInput('Bread omelette')">Bread omelette</div>
+        <div class="card" onclick="fillInput('Lamb Biryani')">Lamb Biryani</div>
+        <div class="card" onclick="fillInput('Nutty Chicken Curry')">Nutty Chicken Curry</div>
+        <div class="card" onclick="fillInput('Tandoori chicken')">Tandoori chicken</div>
+        <div class="card" onclick="fillInput('Kidney Bean Curry')">Kidney Bean Curry</div>
+        <!-- Add more Indian dishes -->
+    </div>
+
+    <div class="categories">
+        <h1><span>Chinese :</span></h1>
+        <div class="card" onclick="fillInput('Chicken Congee')">Chicken Congee</div>
+        <div class="card" onclick="fillInput('Egg Drop Soup')">Egg Drop Soup</div>
+        <div class="card" onclick="fillInput('Hot and Sour Soup')">Hot and Sour Soup</div>
+        <div class="card" onclick="fillInput('Kung Po Prawns')">Kung Po Prawns</div>
+        <div class="card" onclick="fillInput('Szechuan Beef')">Szechuan Beef</div>
+        
+        <!-- Add more Chinese dishes -->
+    </div>
+
+    <div class="categories">
+        <h1><span>Japanese :</span></h1>
+        <div class="card" onclick="fillInput('Chicken Karaage')">Chicken Karaage</div>
+        <div class="card" onclick="fillInput('Japanese Katsudon')">Japanese Katsudon</div>
+        <div class="card" onclick="fillInput('Sushi')">Sushi</div>
+        <div class="card" onclick="fillInput('Honey Teriyaki Salmon')">Honey Teriyaki Salmon</div>
+        <div class="card" onclick="fillInput('Tonkatsu pork')">Tonkatsu pork</div>
+    
+        <!-- Add more Chinese dishes -->
+    </div>
+    <div class="categories">
+        <h1><span>Special :</span></h1>
+        <div class="card" onclick="fillInput('Potato Salad (Olivier Salad)')">Potato Salad (Olivier Salad)</div>
+        <div class="card" onclick="fillInput('Hot Chocolate Fudge')">Hot Chocolate Fudge</div>
+        <div class="card" onclick="fillInput('Carrot Cake')">Carrot Cake</div>
+        <div class="card" onclick="fillInput('Vegetarian Casserole')">Vegetarian Casserole</div>
+        <div class="card" onclick="fillInput(' Katsu Chicken curry')"> Katsu Chicken curry</div>
+        <div class="card" onclick="fillInput(' Chicken & mushroom Hotpot')"> Chicken & mushroom Hotpot</div>
+        <div class="card" onclick="fillInput(' Lasagne')"> Lasagne</div>
+        <div class="card" onclick="fillInput(' Chilli prawn linguine')"> Chilli prawn </div>
+        <div class="card" onclick="fillInput( 'Salted Caramel Cheescake')"> Caramel Cheescake</div>
+        <div class="card" onclick="fillInput( 'Crock Pot Chicken Baked Tacos')"> Crock Pot Chicken Baked Tacos</div>
+    
+        <!-- Add more Chinese dishes -->
+    </div>
+
+    <script>
+        function fillInput(dish) {
+            document.getElementById('foodinput').value = dish;
+        }
+    </script>
+
+    <div class = "form">
+        <form action="/" method="post">
+            <h1><span>  The DiSh is </span></h1>
+             <input id="foodinput" type="text" name="foodname">
+             <br><br>
+             <button type="submit" ><span>See receipe</span></button>
+        </form>
+    </div>
+    
+    <%  if(locals.data){ %>
+    <div class="main">
+        <div class="left">
+
+            <h1 class="food-name">"<span>"   <%= data.strMeal %>   "</span>"</h1>
+            <img src= <%= data.strMealThumb %>  alt="Food Image" class="food-image">
+            <h2><span>Directions 🏷️</span></h2>
+            <br><br>
+            <div class="cooking-instructions-container">
+                <ul class="cooking-instructions-list">
+                   
+                    <% if (data.strInstructions) { %>
+                        <% const instructionsArray = data.strInstructions.split('. '); %>
+            
+                       
+                       <% instructionsArray.forEach((sentence) => { %>
+                        <%    if (sentence.trim() !== '') {           %>
+                    
+                                <li><%= sentence %></li>
+                    
+                                <%    }   %>
+                    <%    });  %>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="right">
+           <h1><span1>💗  C🍩🍩king  is  like <span>Love</span>   💗.</span1> </h1>
+           <br>
+           <br>
+           <br>
+            <div class ="category">
+                <h1><span1> Receipe Category :  " <span><%= data.strCategory%></span>   " </span1></h1>
+                 <br>
+                <h1><span1> Origin : "  <span><%= data.strArea%></span> " </span1></h1>
+            </div>
+            <br><br><br>
+            <h1><span>Ingredients Required..</span></h1>
+            <br>
+            <div class="ingredients-grid">
+                
+                <% for (let i = 1; i <= 14; i++) { %>
+                    <% if (data['strIngredient' + i]) { %>
+                    <div class="ingredient-item">
+                        
+                        <img src="https://www.themealdb.com/images/ingredients/<%= data['strIngredient' + i] %>.png" alt="Ingredient" class="ingredient-image">
+                        <h3><span><%= data['strMeasure' + i] %></span></h3>
+                    </div>
+                    <%} %>
+                <% } %>
+            </div>
+            
+            
+            
+            <% if (data.strYoutube) { %>
+          <%  const videoId = data.strYoutube.split('v=')[1]; %>
+          <%  const embedUrl = `https://www.youtube.com/embed/${videoId}`;   %>
+       
+        <br><br><br><br><br><br>
+
+        <h1><span>Cook along with our <span1>Cook</span1> ..👩🏻‍🍳</span></h1>
+        <iframe width="620" height="415" src="<%= embedUrl %>" frameborder="0" allowfullscreen autoplay></iframe>
+
+       <% } %>
+        </div>
+        
+    </div>
+    <h2><span1>Rate Our Receipe </span1></h2>
+    <div class="star-rating">
+        <input type="radio" name="rating" class="star star-1" id="star1" />
+        <label for="star1" class="star">&#9733;</label>
+        <input type="radio" name="rating" class="star star-2" id="star2" />
+        <label for="star2" class="star">&#9733;</label>
+        <input type="radio" name="rating" class="star star-3" id="star3" />
+        <label for="star3" class="star">&#9733;</label>
+        <input type="radio" name="rating" class="star star-4" id="star4" />
+        <label for="star4" class="star">&#9733;</label>
+        <input type="radio" name="rating" class="star star-5" id="star5" />
+        <label for="star5" class="star">&#9733;</label>
+    </div>   
+        <br><br>
+        <div class ="foot"> <span>Made With 💝  by @Ask</span></div>
+       
+            
+
+    <% } else {%>
+        <%=error.msg%>
+  
+         <%   }   %>
+
+
+</body>
+</html>
+
+
+
+
+
+

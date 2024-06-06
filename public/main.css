@@ -1,0 +1,251 @@
+body{
+    background-color:black;
+    color: white;
+}
+span{
+    color: #00d7c3;
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left, .right {
+    flex: 1;
+}
+
+.food-name {
+    margin: 0;
+    padding: 20px;
+    animation: move 2s linear infinite;
+}
+
+.food-image {
+    width: 100%;
+    height: auto;
+}
+
+.cooking-instructions {
+    padding: 20px;
+    text-align: justify;
+}
+
+.right {
+    padding: 50px;
+    margin-left: 20px;
+}
+.left{
+    padding: 20px;
+    margin-right: 10px;
+}
+.food-image{
+    height: 500px;
+    width: 500px;
+    padding: 5px;
+    margin: 40px;
+    border-radius: 120px;
+    box-shadow: #00d7c3;
+}
+iframe{
+    padding: 50px;
+    margin: 40px;
+    text-align: center;
+}
+h1{
+    color: rgb(255, 255, 255);
+    font-family: Barrio;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images in each row */
+    gap: 10px; /* Adjust the gap between images */
+}
+
+.ingredient-item {
+    text-align: center;
+}
+
+.ingredient-image {
+    max-width: 100%; /* Ensure images don't exceed their container */
+}
+p{
+    font-family: Akaya Kanadaka;
+    font-size: 20px;
+    line-height: 10px;
+}
+.form{
+    text-align: center;
+    padding: 20px;
+}
+button{
+    background-color: transparent;
+    border: 3px solid #00d7c3;
+    border-radius: 50px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    color: #00d7c3;
+    width: 170px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 600;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+  button:hover {
+    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+    border: 3px solid #00d7c3;
+  }
+  
+  .cooking-instructions-container {
+    max-width: 600px; /* Adjust the maximum width based on your design */
+    margin: 0 auto; /* Center the container */
+}
+
+.cooking-instructions-list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+}
+
+.cooking-instructions-list li {
+    margin-bottom: 10px; /* Adjust spacing between list items */
+    font-family: "Papyrus";
+    color:#00d7c3 ;
+    
+    font-size: 23px;
+    line-height: 50px;
+}
+.category{
+    padding: 10px;
+    text-align: center;
+    color: #00d7c3;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 20px;
+    border-style: dotted;
+    border-radius: 1800px;
+}
+h2 {
+    font-weight: bolder;
+    font-style: oblique;
+    text-decoration: underline; /* Underline the text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Set a shadow (adjust values as needed) */
+    text-align: center;
+    color: #00d7c3;
+}
+  
+ 
+#foodinput {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    border: 4px solid #00d7c3;
+    border-radius: 15px;
+    font-size: 26px;
+}
+
+/* Optional: Add styles for focus state */
+#foodinput:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #00d7c3; /* Change border color when focused */
+   
+}
+
+h3{
+    text-align: center;
+}
+  
+span1{
+    font-family: "Papyrus";
+    font-weight: lighter;
+    font-size: xx-large;
+}
+  
+.ingredient-image{
+    width: 120px;
+    height: 120px;
+}
+ 
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.card {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #00d7c3;
+    color: black;
+    font-size: 20px;
+}
+
+
+.star-rating {
+    display: inline-block;
+    font-size: 24px;
+    text-align: center;
+    padding-left: 600px;
+    margin-bottom: 80px;
+}
+
+.star {
+    color: #ccc;
+    cursor: pointer;
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: #ffac33;
+}
+
+.star:checked,
+.star:checked ~ .star {
+    color: #ffac33;
+}
+
+.star-hidden {
+    display: none;
+}
+
+.foot{
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 20px;
+}
+.heading{
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top:40px ;
+    font-size: 20px;
+}
+
+.carousel {
+    width: 100%;
+    height: 10%; /* Adjust the height as needed */
+    background-color: black; /* Set your desired background color */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+}
